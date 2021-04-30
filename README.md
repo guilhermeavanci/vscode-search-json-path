@@ -90,7 +90,7 @@ The extension default settings are the following:
 | Syntax | Type | Default Value | Description |
 | ----------- | ----------- | ----------- | ----------- |
 | enable | `boolean` | `true` | Define if the extension is currently active |
-| prefixAndSuffix | `String | Array<String> | Array<Array<String>>` | `["'", "\""]` | Can have many formats dependending on your needs (See more at [prefixAndSuffix formats](#prefixandsuffix-formats) section). The `String` ocurrencies can be a `Regex`. |`
+| prefixAndSuffix | `String \| Array<String> \| Array<Array<String>>` | `["'", "\""]` | Can have many formats dependending on your needs (See more at [prefixAndSuffix formats](#prefixandsuffix-formats) section). The `String` ocurrencies can be a `Regex`. |`
 | codeLenses.enable | `boolean` | `false` | Define if the code lens feature is active |
 
 ### prefixAndSuffix formats
