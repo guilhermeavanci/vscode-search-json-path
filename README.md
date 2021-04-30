@@ -144,3 +144,7 @@ There are many ways to configure the `prefixAndSuffix` option depending on your 
 ### 0.0.1
 
 The initial release.
+
+### 0.0.2
+
+Fixing images.
