@@ -2,7 +2,7 @@
   "name": "search-json-path",
   "displayName": "Search JSON Path",
   "icon": "images/icon.png",
-  "description": "Search for json path throughout the json file",
+  "description": "Search for json path throughout the project workspace",
   "version": "0.0.2",
   "publisher": "guilhermeavanci",
   "repository": {
