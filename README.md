@@ -1,4 +1,4 @@
-# search-json-path
+# vscode-search-json-path
 
 Extension to find every JSON file and the respective key containing the specified path.
 
