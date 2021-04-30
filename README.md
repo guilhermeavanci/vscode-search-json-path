@@ -2,6 +2,8 @@
 
 Extension to find every JSON file and the respective key containing the specified path.
 
+![Example animated image](https://github.com/guilhermeavanci/vscode-search-json-path/blob/main/images/example.gif)
+
 ## Motivation
 
 The creation of this extension was motivated by the usage of the [i18next](https://www.i18next.com/) library. While using i18next I felt the need to quickly access the internationalization JSON files through the path already defined inside the code. Well, that's what this extension resolve.
@@ -45,18 +47,25 @@ The extension currently supports simple paths. See some example below:
 
 An input interface is invoked by the extension. Type the desired path and press `Enter`. All `.json` files inside your workspace containing the path specified must be showed in a list above the input.
 
+![Search Interface animated image](https://github.com/guilhermeavanci/vscode-search-json-path/blob/main/images/search-interface.gif)
+
 ### Search Json Path command
 
 `Ctrl+P` and type `Search Json Path` to open the search interface. Type the desired path and press `Enter`. The [**Search Interface**](#search-interface) must appear waiting for the path insertion.
 
+![Search Interface image](https://github.com/guilhermeavanci/vscode-search-json-path/blob/main/images/command.png)
 
 ### Right-click and use Search JSON Path
 
 Right-click in the document give you the option `Search Json Path`. It does exactly the same thing as [**Search Json Path command**](#search-json-path-command) with the exception that if some text is already selected in the document it automatically fills the [**Search Interface**](#search-interface) input.
 
+![Right-click and use Search JSON Path image](https://github.com/guilhermeavanci/vscode-search-json-path/blob/main/images/menu.png)
+
 ### Code Lenses
 
 The [code lens](https://code.visualstudio.com/api/language-extensions/programmatic-language-features#codelens-show-actionable-context-information-within-source-code) feature is shown inside the document directly above the line where the extension identifies a path. It's another quick way to open the [**Search Interface**](#search-interface) automatically passing the path identified.
+
+![Code Lenses image](https://github.com/guilhermeavanci/vscode-search-json-path/blob/main/images/code-lenses.png)
 
 Note that the code lens feature is disabled by default to prevent undesired IDE noises because its default way to find out the paths is considering all strings a path. If you want to use this feature, the suggestion is to carefully set the `prefixAndSuffix` extension in a way to guarantee the extension can identify exactly what you want.
 
