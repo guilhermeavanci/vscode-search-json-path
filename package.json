@@ -3,7 +3,7 @@
   "displayName": "Search JSON Path",
   "icon": "images/icon.png",
   "description": "Search for json path throughout the project workspace",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "guilhermeavanci",
   "repository": {
     "type": "git",
