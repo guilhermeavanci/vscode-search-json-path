@@ -18,7 +18,7 @@ The extension currently supports simple paths. See some example below:
 	"this": {
 		"is": {
 			"a": {
-				"path": "yes, it is" // match this
+				"path": "yes, it is"
 			}
 		}
 	}
@@ -32,7 +32,7 @@ The extension currently supports simple paths. See some example below:
 		"the": {
 			"second": [
 				"not here",
-				"here it is" // match this
+				"here it is"
 			]
 		}
 	}
@@ -101,15 +101,15 @@ There are many ways to configure the `prefixAndSuffix` option depending on your 
 ```javascript
 "'"
 ```
-> <mark>'</mark>this.is.a.path<mark>'</mark>
+> `'`this.is.a.path`'`
 
 #### *Multiple* prefix and suffix
 ```javascript
 ["'", "\""]
 ```
-> <mark>'</mark>this.is.a.path<mark>'</mark>
+> `'`this.is.a.path`'`
 > 
-> <mark>"</mark>this.is.a.path<mark>"</mark>
+> `"`this.is.a.path`"`
 
 #### *Different* prefix and suffix
 ```javascript
@@ -117,7 +117,7 @@ There are many ways to configure the `prefixAndSuffix` option depending on your 
 	["prefix-", "-suffix"]
 ]
 ```
-> <mark>prefix-</mark>this.is.a.path<mark>-suffix</mark>
+> `prefix-`this.is.a.path`-suffix`
 
 #### *Multiple and Different* prefix and suffix
 ```javascript
@@ -126,9 +126,9 @@ There are many ways to configure the `prefixAndSuffix` option depending on your 
 	["t('", "')"]
 ]
 ```
-> <mark>prefix-</mark>this.is.a.path<mark>-suffix</mark>
+> `prefix-`this.is.a.path`-suffix`
 > 
-> <mark>t('</mark>this.is.a.path<mark>')</mark>
+> `t('`this.is.a.path`')`
 
 ## Release Notes
 
