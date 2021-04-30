@@ -1,8 +1,14 @@
 {
   "name": "search-json-path",
-  "displayName": "search-json-path",
+  "displayName": "Search JSON Path",
+  "icon": "images/icon.png",
   "description": "Search for json path throughout the json file",
   "version": "0.0.1",
+  "publisher": "guilhermeavanci",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guilhermeavanci/vscode-search-json-path.git"
+  },
   "engines": {
     "vscode": "^1.55.0"
   },
