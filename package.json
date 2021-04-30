@@ -1,0 +1,56 @@
+{
+  "name": "search-json-path",
+  "displayName": "search-json-path",
+  "description": "Search for json path throughout the json file",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.55.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:search-json-path.search",
+    "onLanguage:json",
+    "onLanguage:jsonc",
+    "onLanguage:javascript",
+    "onLanguage:jsx",
+    "onLanguage:typescript",
+    "onLanguage:typescriptreact"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "search-json-path.search",
+        "title": "Search Json Path"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "search-json-path.search",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "keywords": [
+    "JSON",
+    "search",
+    "path"
+  ],
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.55.0",
+    "@types/glob": "^7.1.3",
+    "@types/node": "^12.11.7",
+    "eslint": "^7.19.0",
+    "glob": "^7.1.6"
+  },
+  "dependencies": {}
+}
