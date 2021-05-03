@@ -2,12 +2,12 @@
 
 ## 0.0.1
 
-The initial release.
+- Initial release.
 
 ## 0.0.2
 
-Fixing images.
+- Fixing doc images.
 
 ## 0.0.3
 
-Improving project description.
+- Improving project description.
