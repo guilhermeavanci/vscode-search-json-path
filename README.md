@@ -138,18 +138,3 @@ There are many ways to configure the `prefixAndSuffix` option depending on your 
 > `prefix-`this.is.a.path`-suffix`
 > 
 > `t('`this.is.a.path`')`
-
-## Release Notes
-
-### 0.0.1
-
-The initial release.
-
-### 0.0.2
-
-Fixing images.
-
-
-### 0.0.3
-
-Improving project description.
