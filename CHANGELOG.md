@@ -11,3 +11,8 @@
 ## 0.0.3
 
 - Improving project description.
+
+## 0.0.4
+
+- Improving example gif in doc
+- Moving Changelog to a proper markdown file
