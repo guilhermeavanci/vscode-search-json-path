@@ -171,13 +171,16 @@ function removePrefixAndSuffix(value) {
 }
 
 function getValue() {
-  const value = vscode.window.activeTextEditor.document.getText(
-    vscode.window.activeTextEditor.selection
-  );
-  if (!value) {
-    return;
+  if (vscode.window.activeTextEditor) {
+    const value = vscode.window.activeTextEditor.document.getText(
+      vscode.window.activeTextEditor.selection
+    );
+    if (!value) {
+      return;
+    }
+    return removePrefixAndSuffix(value);
   }
-  return removePrefixAndSuffix(value);
+  return;
 }
 
 function showInput(value) {
