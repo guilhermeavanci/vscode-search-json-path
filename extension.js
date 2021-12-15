@@ -128,8 +128,13 @@ function showQuickPick(path, filesFound) {
 function searchPathInJson(pathArray, json) {
   return vscode.workspace.fs.readFile(json).then((content) => {
     const jsonString = Buffer.from(content).toString();
-    const jsonObject = JSON.parse(jsonString);
-    return deepFind(pathArray, jsonObject, true) && { json, jsonString };
+    try {
+      const jsonObject = JSON.parse(jsonString);
+      return deepFind(pathArray, jsonObject, true) && { json, jsonString };
+    } catch (e) {
+      console.error(`Parse error in ${json.path}`, e);
+      return;
+    }
   });
 }
 
@@ -171,13 +176,16 @@ function removePrefixAndSuffix(value) {
 }
 
 function getValue() {
-  const value = vscode.window.activeTextEditor.document.getText(
-    vscode.window.activeTextEditor.selection
-  );
-  if (!value) {
-    return;
+  if (vscode.window.activeTextEditor) {
+    const value = vscode.window.activeTextEditor.document.getText(
+      vscode.window.activeTextEditor.selection
+    );
+    if (!value) {
+      return;
+    }
+    return removePrefixAndSuffix(value);
   }
-  return removePrefixAndSuffix(value);
+  return;
 }
 
 function showInput(value) {
