@@ -21,3 +21,7 @@
 
 - Preventing crash when the JSON is not in a valid format.
 - Preventing error message from appearing when there's no files being displayed by vscode.
+
+## 0.0.6
+
+- Fixing configuration settings.
