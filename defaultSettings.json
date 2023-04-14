@@ -1,7 +1,0 @@
-{
-  "enable": true,
-  "prefixAndSuffix": ["'", "\""],
-  "codeLenses": {
-    "enable": false
-  }
-}

@@ -1,6 +1,5 @@
 const vscode = require("vscode");
 const pkg = require("./package.json");
-const defaultSettings = require("./defaultSettings.json");
 
 function sanitizePrefixAndSuffix(value) {
   if (typeof value === "string") {
@@ -19,7 +18,7 @@ function sanitizePrefixAndSuffix(value) {
 const prefixAndSuffix = sanitizePrefixAndSuffix(
   vscode.workspace
     .getConfiguration(pkg.name)
-    .get("prefixAndSuffix", defaultSettings.prefixAndSuffix)
+    .get("prefixAndSuffix")
 );
 
 const pattern = getEspacedPrefixAndSuffix()
@@ -200,7 +199,7 @@ function activate({ subscriptions }) {
   if (
     !vscode.workspace
       .getConfiguration(pkg.name)
-      .get("enable", defaultSettings.enable)
+      .get("enable")
   ) {
     return;
   }
@@ -239,7 +238,7 @@ class CodeLensProvider {
     if (
       vscode.workspace
         .getConfiguration(pkg.name)
-        .get("codeLenses.enable", defaultSettings.codeLenses.enable)
+        .get("codeLenses.enable")
     ) {
       this.codeLenses = [];
       const text = doc.getText();
@@ -266,7 +265,7 @@ class CodeLensProvider {
     if (
       vscode.workspace
         .getConfiguration(pkg.name)
-        .get("codeLenses.enable", defaultSettings.codeLenses.enable)
+        .get("codeLenses.enable")
     ) {
       const selectedLens = this.codeLenses.find(
         (c) => c.codeLens.range === lens.range

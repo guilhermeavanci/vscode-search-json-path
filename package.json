@@ -3,7 +3,7 @@
   "displayName": "Search JSON Path",
   "icon": "images/icon.png",
   "description": "Search for json path throughout the project workspace",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "publisher": "guilhermeavanci",
   "repository": {
     "type": "git",
@@ -39,12 +39,29 @@
           "group": "navigation"
         }
       ]
+    },
+    "configuration": {
+      "title": "Search JSON Path configuration",
+      "type": "object",
+      "properties": {
+        "search-json-path": {
+          "enable": true,
+          "prefixAndSuffix": [
+            "'",
+            "\""
+          ],
+          "codeLenses": {
+            "enable": false
+          }
+        }
+      }
     }
   },
   "keywords": [
     "JSON",
     "search",
-    "path"
+    "path",
+    "i18n"
   ],
   "scripts": {
     "lint": "eslint .",
