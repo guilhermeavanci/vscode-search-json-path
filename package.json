@@ -41,18 +41,24 @@
       ]
     },
     "configuration": {
-      "title": "Search JSON Path configuration",
+      "title": "Search JSON Path",
       "type": "object",
       "properties": {
-        "search-json-path": {
-          "enable": true,
-          "prefixAndSuffix": [
-            "'",
-            "\""
-          ],
-          "codeLenses": {
-            "enable": false
-          }
+        "search-json-path.enable": {
+          "type": "boolean",
+          "default": true,
+          "description": "enable addon"
+        },
+        "search-json-path.prefixAndSuffix": {
+          "type": "array",
+          "items": {"type": "string"},
+          "default": ["'","\""],
+          "description": "allowable delimiters for JSON keys"
+        },
+        "search-json-path.codeLenses.enable": {
+          "type": "boolean",
+          "default": false,
+          "description": "enable JSON search path code lens"
         }
       }
     }
