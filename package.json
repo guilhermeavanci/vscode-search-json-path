@@ -50,9 +50,23 @@
           "description": "enable addon"
         },
         "search-json-path.prefixAndSuffix": {
-          "type": "array",
-          "items": {"type": "string"},
-          "default": ["'","\""],
+          "type": [
+            "string",
+            "array"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "array"
+            ],
+            "items": {
+              "type": "string"
+            }
+          },
+          "default": [
+            "'",
+            "\""
+          ],
           "description": "allowable delimiters for JSON keys"
         },
         "search-json-path.codeLenses.enable": {
